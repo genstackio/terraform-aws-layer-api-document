@@ -1,5 +1,6 @@
 module "lambda" {
-  source                = "github.com/ohoareau/terraform-modules//modules/lambda-api-base"
+  source                = "genstackio/api-base/aws"
+  version               = "0.1.0"
   name                  = var.name
   runtime               = var.runtime
   timeout               = var.timeout
