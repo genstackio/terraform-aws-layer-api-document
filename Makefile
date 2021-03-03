@@ -13,7 +13,7 @@ install: install-root install-modules
 install-modules: install-root
 	@$(foreach m,$(makeable_modules),make -C modules/$(m)/ install;)
 install-root:
-	@true
+	@terraform get
 
 module-build:
 	@make -C modules/$(m)/ build

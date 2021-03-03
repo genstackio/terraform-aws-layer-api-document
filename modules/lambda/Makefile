@@ -1,6 +1,11 @@
 all: install
 
-install:
+install: install-root install-code
+
+install-root:
+	@terraform get
+
+install-code:
 	@cd code && npm_config_arch=x64 npm_config_platform=linux yarn --silent install --prod
 
 build:
@@ -10,4 +15,4 @@ test:
 	@cd  code && yarn --silent test
 
 
-.PHONY: all build install test
+.PHONY: all build install install-root install-code test

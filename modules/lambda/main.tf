@@ -1,6 +1,6 @@
 module "lambda" {
   source                = "genstackio/api-base/aws"
-  version               = "0.1.0"
+  version               = "0.1.1"
   name                  = var.name
   runtime               = var.runtime
   timeout               = var.timeout
